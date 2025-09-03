@@ -1,0 +1,52 @@
+/* .dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+} */
+
+
+/* Whole dashboard (column layout: navbar on top, then row with sidebar + content) */
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Row under navbar: sidebar + content */
+.dashboard-body {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar stays fixed width */
+
+/* .sidebar {
+  width:  344px; 
+  background: #FF6767; 
+  flex-shrink: 0;
+} */
+
+/* Main content fills remaining space */
+
+
+.dashboard-main {
+  /* flex: 1; */
+  padding-top: 56px;
+  /* padding-left: 380px; */
+  background: #fff;
+  overflow-y: auto; /* browser scrollbar if content is tall */
+}

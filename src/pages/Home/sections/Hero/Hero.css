@@ -1,0 +1,182 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero {
+  width: 100%;
+  padding: 43px 0;
+}
+
+.hero-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #000;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.hero-slide {
+  display: flex;
+  align-items: center;
+  max-width: 1170px;
+  margin: 0 auto;
+  justify-content: flex-start; 
+  position: relative; 
+  gap: 38px; 
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  flex: 0 0 auto; 
+}
+
+.hero-center {
+  flex: 0 0 auto;
+  position: relative; 
+}
+
+
+.hero-content-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 38px; 
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hero-apple {
+  width: 40px;
+  height: auto;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.hero-heading {
+  font-family: 'Inter', sans-serif;
+font-weight: 600;
+font-size: 48px;
+line-height: 60px;
+letter-spacing: 4%;
+max-width: 294px;
+}
+
+.shop-now {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.shop-now span {
+    text-decoration: none;
+  border-bottom: 2px solid #fff; 
+  line-height: 1; 
+  padding-bottom: 2px; 
+}
+
+
+
+.hero-arrow {
+  width: 24px;
+  height: auto;
+}
+
+.hero-center img {
+  width: 100%;
+  max-width: 500px;
+  margin-left: 0;
+}
+
+ 
+.swiper-pagination {
+  bottom: 15px !important;
+}
+.swiper-pagination-bullet {
+  background: #fff !important;
+  opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+  background: #fff !important;
+  opacity: 1;
+} 
+
+
+
+
+/* For tablets 1024px */
+@media (max-width: 1024px) {
+  .hero-inner {
+    padding: 0 15px;
+  }
+  .hero-heading {
+    font-size: 36px;
+    line-height: 46px;
+    max-width: 250px;
+  }
+  .hero-center img {
+    max-width: 400px;
+  }
+}
+
+/* For mobile 768px */
+@media (max-width: 768px) {
+  .hero-inner {
+    padding: 10px 10px;
+  }
+  .hero-slide {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .hero-left {
+    align-items: center;
+    gap: 16px;
+  }
+  .hero-heading {
+    font-size: 28px;
+    line-height: 36px;
+    max-width: 100%;
+  }
+  .shop-now {
+    justify-content: center;
+  }
+  .hero-center img {
+    max-width: 100%;
+  }
+  .hero-content-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+   .swiper-pagination {
+    position: relative !important; /* make it part of flow */
+    bottom: 0 !important;
+    margin-top: 15px; /* spacing below hero content */
+    display: flex !important;
+    justify-content: center; /* center dots */
+  }
+}

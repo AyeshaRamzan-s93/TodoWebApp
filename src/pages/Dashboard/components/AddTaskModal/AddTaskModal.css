@@ -1,0 +1,228 @@
+
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal container */
+.modal {
+  width: 918px;
+  /* height: 708px; */
+  background: #F9F9F9;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 39px;
+}
+
+.header h2 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.goBackBtn {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.inner {
+  /* flex: 1; */
+  background: #F9F9F9;
+  border: 1px solid #ccc;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Input fields stacked vertically */
+.field {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.field label {
+  margin-bottom: 9px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.field input,
+.textareaField textarea {
+  padding: 16px;
+  border: 1px solid #A1A3AB;
+  border-radius: 8px;
+  background: #F9F9F9;
+  font-size: 14px;
+  outline: none;
+  /* width: 100%; */
+  box-sizing: border-box;
+  margin-bottom: 9px;
+}
+
+/* Date input with icon */
+.dateField {
+  position: relative;
+}
+
+.dateField input {
+  width: 100%;
+  padding-right: 12px;
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Priority */
+.priority label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+font-size: 14px;
+margin-bottom: 15px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+
+.priorityRow {
+  display: flex;
+  gap: 20px;
+}
+
+.checkbox input {
+  margin-right: 6px;
+}
+
+.checkbox input:value {
+    color: #A1A3AB;
+}
+
+.description-upload-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* Upload box on the left */
+.uploadBox {
+  width: 214px;
+  height: 205px;
+  border: 1px dashed #ccc;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  background: #fafafa;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.uploadContent .imageIcon {
+  font-size: 28px;
+}
+
+.row11 {
+    display: flex;
+    flex-direction: row;
+}
+
+.browseBtn {
+  padding: 6px 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  color: #A1A3AB;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+/* .browseBtn:hover {
+  background: #d63b10;
+} */
+
+/* Description box on the right */
+.textareaField {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.textareaField label {
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+line-height: 100%;
+letter-spacing: 0%;
+font-weight: 400;
+font-size: 13px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+
+.textareaField textarea {
+  height: 205px;
+  resize: none;
+}
+
+.doneBtn {
+  margin-top: 16px;
+  align-self: flex-end;
+  padding: 8px 26px;
+  background: #f24e1e;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.doneBtn:hover {
+  background: #d63b10;
+}

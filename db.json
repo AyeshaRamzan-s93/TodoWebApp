@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": "97fb",
+      "firstName": "Ayesha",
+      "lastName": "Ramzan",
+      "username": "ayesha_123",
+      "email": "ayesha.ramzan@studio93.io",
+      "password": "ashi",
+      "confirmPassword": "ashi",
+      "agree": true
+    },
+    {
+      "id": "2c53",
+      "firstName": "Ayesha",
+      "lastName": "Ramzan",
+      "username": "123",
+      "email": "ayesha.ramzan@studio93.io",
+      "password": "123",
+      "confirmPassword": "123",
+      "agree": true
+    },
+    {
+      "id": "1756801114033",
+      "firstName": "Ayesha",
+      "lastName": "Ramzan",
+      "username": "12345",
+      "email": "ayesha.ramzan@studio933.io",
+      "password": "123456"
+    },
+    {
+      "id": "1756801205831",
+      "firstName": "Ayesha",
+      "lastName": "Ramzan",
+      "username": "ayesha_200",
+      "email": "ayesha.ramzan@studio8893.io",
+      "password": "ashiii"
+    },
+    {
+      "id": "1756888483626",
+      "firstName": "Zunaira",
+      "lastName": "Batool",
+      "username": "zuni123",
+      "email": "zuni123@gmail.com",
+      "password": "zun1234",
+      "todos": [
+        {
+          "id": 1756906766924,
+          "title": "Prepare Food",
+          "date": "2025-09-06",
+          "priority": "Extreme",
+          "description": "It is good to prepare food for loved ones on specially weekends",
+          "status": "Not Started"
+        }
+      ]
+    }
+  ]
+}

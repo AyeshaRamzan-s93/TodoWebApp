@@ -1,0 +1,149 @@
+
+
+.settings-container {
+  margin-left: 20px;   
+}
+
+.settings-box {
+  width: 959px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 24px;
+  background: #fff;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-header h2 {
+ 
+  color: #000;
+  font-family: 'Inter', sans-serif;
+font-weight: 600;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.go-back {
+  background: none;
+  border: none;
+  color: black;
+
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+
+}
+
+.settings-underline {
+  border: none;
+  border-bottom: 2px solid #ff0000;
+  margin: 8px 0 20px;
+  max-width: 161px;
+}
+
+.settings-user-info {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+.empty-text {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.firstName {
+    font-family: 'Inter', sans-serif;
+font-weight: 600;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+margin-top: 54px;
+color: black;
+margin-bottom: 4px;
+}
+
+.settings-form-box {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 38px;
+  /* height: 534px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  max-width: 511px;
+}
+
+.form-group input {
+  outline: none;
+}
+.form-group label {
+  margin-bottom: 8px;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.settings-buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 32px;
+}
+
+.update-btn {
+  padding: 9px 24px;
+  border: none;
+  background: #F24E1E;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.password-btn {
+  padding: 9px 24px;
+  border: 1px solid #ff0000;
+  background: #F24E1E;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+}
