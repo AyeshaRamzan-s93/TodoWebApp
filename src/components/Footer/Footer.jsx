@@ -3,7 +3,7 @@ import "./Footer.css";
 
 import sendIcon from "../../assets/icon-send.svg"; 
 import appImage from "../../assets/Footer-img.svg";
-import fb from "../../assets/Icon-facebook.svg"; 
+import fb from "../../assets/Icon-Facebook.svg"; 
 import tw from "../../assets/Icon-Twitter.svg";
 import ig from "../../assets/icon-instagram.svg";
 import linkedin from "../../assets/Icon-linkedin.svg";
