@@ -29,6 +29,7 @@ function Login() {
       if (user.password === password) {
         setError("");
         navigate("/dashboard"); 
+        localStorage.setItem("user", JSON.stringify(user));
       } else {
         setError("Invalid password!");
       }
