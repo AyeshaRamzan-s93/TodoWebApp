@@ -6,7 +6,7 @@ import "./Products.css";
 import smallIcon from "../../../../assets/productsSmall.svg";
 import wishlistIcon from "../../../../assets/Fill Heart.svg";
 import eyeIcon from "../../../../assets/Fill Eye.svg";
-import star5 from "../../../../assets/Five Star.svg";
+import star5 from "../../../../assets/Five star.svg";
 import star4 from "../../../../assets/Four Half Star.svg";
 import product1 from "../../../../assets/product1.svg";
 import product2 from "../../../../assets/product2.svg";
