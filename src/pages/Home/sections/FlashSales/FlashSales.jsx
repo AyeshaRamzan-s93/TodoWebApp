@@ -223,7 +223,7 @@ import nextIcon from "../../../../assets/nextIcon.svg";
 import timerDot from "../../../../assets/FlashSmall.png";
 
 import gamepadImg from "../../../../assets/gamepad.png";
-import keyboardImg from "../../../../assets/keyboard.png";
+import keyboardImg from "../../../../assets/Keyboard.png";
 import monitorImg from "../../../../assets/Monitor.png";
 import chairImg from "../../../../assets/chair.png";
 
