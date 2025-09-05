@@ -3,25 +3,25 @@
 .sidebar {
   max-width: 344px;
   width: 100%;
-  
   background-color: #FF6767;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: 32px;
-  /* padding-left: 49px; */
-  /* padding-right: 58px; */
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: space-between; */
   box-sizing: border-box;
-  /* position: fixed; */
-  top: 120px; /* push below navbar */
-  left: 0;
-  /* overflow-y: auto;  */
+  margin-top: 56px;
+  border-radius: 8px;
+  /* padding: 32px 40px; */
+
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
 }
 
 
 .sidebar-user {
-  padding: 0 5px;
+  padding-top: 32px;
+  padding-left: 40px;
+  /* padding-right: 58px; */
+
 }
 
 .sidebar-user h3 {
@@ -29,7 +29,7 @@
   margin-bottom: 10px;
   font-weight: 500;
   color: #fff; 
-
+  font-family: 'Inter', sans-serif;
 }
 
 .sidebar-user p {
@@ -40,55 +40,65 @@ font-weight: 400;
 font-size: 12px;
 line-height: 100%;
 letter-spacing: 0%;
-
 }
 
 .sidebar-menu {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  margin: 20px 10px;
-  /* gap: 10px; */
+  gap: 10px; 
 }
+
+
 
 .sidebar-item {
   display: flex;
   align-items: center;
-  gap: 16px;
-  text-decoration: none;   /* remove underline */
-  color: #fff !important;  /* force white for inactive */
+  gap: 16px; 
+  text-decoration: none;
+  color: #fff !important;
   font-size: 14px;
   border-radius: 14px;
   font-weight: 500;
-  transition: all 0.3s ease;
-  padding: 20px;
+  /* transition: all 0.6s ease; */
+  padding: 22px 48px;
+  
+  width: 271px;   
+  height: 59px;   
+  /* padding: 0 20px;  */
+  
   font-family: 'Inter', sans-serif;
+  box-sizing: border-box; /* makes padding behave correctly */
 }
 
 .sidebar-item img {
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
+  flex-shrink: 0; 
 }
 
-/* Active state */
+
 .sidebar-item.active {
   background-color: #fff;
   color: #FF6767 !important;
   font-weight: 600;
+  margin-left: 28px;
 }
 
 .sidebar-item.active img {
-  filter: none; 
+  filter: none;
 }
 
 .sidebar-item span {
-  color: inherit !important; 
+  color: inherit !important;
+  white-space: nowrap; 
 }
+
+
 
 
 
 .sidebar-logout {
-  padding: 30px;
-  margin-top: auto;
+  padding: 22px 48px;
+  margin-top: 50px;
   
 }
 
@@ -113,4 +123,7 @@ letter-spacing: 0%;
   height: 20px;
   filter: brightness(0) invert(1); 
 }
+
+
+
 

@@ -27,9 +27,10 @@
 }
 
 /* Row under navbar: sidebar + content */
+
 .dashboard-body {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
 }
 
 /* Sidebar stays fixed width */
@@ -45,8 +46,9 @@
 
 .dashboard-main {
   /* flex: 1; */
-  padding-top: 56px;
+  margin-top: 56px;
+  /* margin-left: 32px; */
   /* padding-left: 380px; */
-  background: #fff;
-  overflow-y: auto; /* browser scrollbar if content is tall */
+  background: #F5F8FF;
+  /* overflow-y: auto; */
 }

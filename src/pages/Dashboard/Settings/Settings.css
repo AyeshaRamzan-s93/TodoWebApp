@@ -9,7 +9,7 @@
   border: 1px solid #ccc;
   border-radius: 12px;
   padding: 24px;
-  background: #fff;
+  background: #F5F8FF;
 }
 
 .settings-header {
@@ -94,6 +94,7 @@ margin-bottom: 4px;
 
 .form-group input {
   outline: none;
+  background: #F5F8FF;
 }
 .form-group label {
   margin-bottom: 8px;

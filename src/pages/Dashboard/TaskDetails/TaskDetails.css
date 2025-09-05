@@ -1,0 +1,119 @@
+
+
+/* Task Detail Overlay */
+.task-detail-overlay {
+  position: relative;
+  width: 958px; /* match dashboard width */
+  min-height: 500px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Go Back */
+.go-back {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FF6767;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.go-back:hover {
+  text-decoration: underline;
+}
+
+/* Top section: image left, meta right */
+.task-detail-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.task-detail-img {
+  width: 180px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.task-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.task-meta h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.task-meta .priority {
+  font-size: 14px;
+  font-weight: 500;
+  color: #377DFF; /* blue */
+}
+
+.task-meta .status {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FF6767; /* red default */
+}
+
+.task-meta .status.completed {
+  color: #22C55E; /* green if completed */
+}
+
+.task-meta .status.inprogress {
+  color: #FFA500; /* orange if in progress */
+}
+
+.task-meta .date {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Description */
+.task-detail-desc {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+  margin-top: 10px;
+}
+
+.task-detail-desc h4 {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Action icons (bottom right corner) */
+.task-detail-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.task-detail-actions img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.task-detail-actions img:hover {
+  transform: scale(1.1);
+}

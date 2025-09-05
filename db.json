@@ -26,7 +26,41 @@
       "lastName": "Ramzan",
       "username": "12345",
       "email": "ayesha.ramzan@studio933.io",
-      "password": "123456"
+      "password": "123456",
+      "todos": [
+        {
+          "id": 1757007332065,
+          "title": "Make Pasta",
+          "date": "2025-09-16",
+          "priority": "Extreme",
+          "description": "Pasta is make from veggies, cheers with friends and loved ones and having all time fun is good ",
+          "status": "Completed"
+        },
+        {
+          "id": 1757010695381,
+          "title": "prepare food ",
+          "date": "2025-09-21",
+          "priority": "Low",
+          "description": "food making is so good to make",
+          "status": "In Progress"
+        },
+        {
+          "id": 1757045831966,
+          "title": "Get ready for party ",
+          "date": "2025-09-06",
+          "priority": "Moderate",
+          "description": "Ready early for the party because at everytime i reached late there ",
+          "status": "Not Started"
+        },
+        {
+          "id": 1757054046290,
+          "title": "uuuu",
+          "date": "2025-09-13",
+          "priority": "Extreme",
+          "description": "uuuuuu",
+          "status": "Not Started"
+        }
+      ]
     },
     {
       "id": "1756801205831",
@@ -55,7 +89,7 @@
       ]
     },
     {
-      "id": 1756921595391,
+      "id": "1756921595391",
       "firstName": "Aima",
       "lastName": "Azhar",
       "username": "aima123",

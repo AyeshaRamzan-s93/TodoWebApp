@@ -1,0 +1,166 @@
+
+
+.mytasks-container {
+  display: flex;
+  height: auto;
+  gap: 20px;
+ 
+}
+
+/* Left column */
+.task-list-column {
+  width: 423px;
+  border: 1px solid #A1A3ABA1;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.mytasks-title {
+  
+  margin-bottom: 18px;
+  position: relative;
+
+  font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.underline {
+  display: block;
+  height: 2px;
+  width: 40px;
+  background: #F24E1E;
+  margin-top: 4px;
+}
+
+.task-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.task-wrapper.active {
+ background: #A1A3AB2B;
+  border-radius: 8px;
+}
+
+/* Right column */
+
+.task-details-column {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #A1A3ABA1;
+  border-radius: 12px;
+  max-width: 511px;
+  margin-bottom: 32px;
+}
+
+
+.task-details {
+  
+  border-radius: 12px;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task-details-top {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.task-details-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.task-details-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+.task-details-info span {
+  font-size: 14px;
+  font-weight: 500;
+  
+}
+
+.task-details-info .priority {
+  color: #F21E1E; 
+}
+
+.task-details-info .status {
+  color: #F21E1E; 
+}
+
+.task-details-info .date {
+  color: #A1A3AB;
+  font-size: 12px;
+}
+
+/* Image on right side */
+.task-details-image {
+  width: 160px;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Description below */
+
+.task-details-desc {
+  font-size: 14px;
+  color: #747474;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Bottom actions */
+.task-details-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.task-details-actions img {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.task-details-actions img:hover {
+  transform: scale(1.1);
+}
+
+.task-list .task-wrapper.active {
+  background-color: #e9ecef !important;
+
+}
