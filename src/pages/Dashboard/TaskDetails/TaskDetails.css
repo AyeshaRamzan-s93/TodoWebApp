@@ -64,19 +64,19 @@
   color: #377DFF; /* blue */
 }
 
-.task-meta .status {
+/* .task-meta .status {
   font-size: 14px;
   font-weight: 500;
-  color: #FF6767; /* red default */
+  color: #FF6767; 
 }
 
 .task-meta .status.completed {
-  color: #22C55E; /* green if completed */
+  color: #22C55E; 
 }
 
 .task-meta .status.inprogress {
-  color: #FFA500; /* orange if in progress */
-}
+  color: #FFA500; 
+} */
 
 .task-meta .date {
   font-size: 13px;
@@ -116,4 +116,20 @@
 
 .task-detail-actions img:hover {
   transform: scale(1.1);
+}
+
+
+
+
+/* Status text colors */
+.status.notstarted {
+  color: #ff4d4d; /* red */
+}
+
+.status.inprogress {
+  color: #377dff; /* blue */
+}
+
+.status.completed {
+  color: #22c55e; /* green */
 }

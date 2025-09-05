@@ -106,16 +106,32 @@
   font-family: 'Inter', sans-serif;
 }
 
-.priority {
-  color: #42ade2; /* blue for priority value */
+
+/* Priority colors */
+.priority-low {
+  color: #F21E1E;  
+}
+
+.priority-moderate {
+  color: blue;   
+}
+
+.priority-extreme {
+  color: #F21E1E;    
+}
+
+
+
+/* .priority {
+  color: #42ade2; 
   font-weight: 500;
 }
 
 .status {
-  color: #f44336; /* default red for Not Started */
+  
   font-weight: 500;
 }
 
 .created {
-  color: #888; /* gray for date */
-}
+  color: #888; 
+} */

@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 // import "./TaskCard.css";
 
 // function TaskCard({ task }) {
@@ -65,9 +57,6 @@
 
 // export default TaskCard;
 
-
-
-
 // import "./TaskCard.css";
 
 // function TaskCard({ task }) {
@@ -111,9 +100,6 @@
 
 // export default TaskCard;
 
-
-
-
 import "./TaskCard.css";
 
 function TaskCard({ task }) {
@@ -145,15 +131,36 @@ function TaskCard({ task }) {
       <div className="task-footer">
         <span>
           <strong>Priority:</strong>{" "}
-          <span className="priority">{task.priority}</span>
+          <span>
+            Priority:{" "}
+            <span
+              className={`priority ${
+                task.priority === "Low"
+                  ? "priority-low"
+                  : task.priority === "Moderate"
+                  ? "priority-moderate"
+                  : "priority-extreme"
+              }`}
+            >
+              {task.priority}
+            </span>
+          </span>
         </span>
         <span>
           <strong>Status:</strong>{" "}
-          <span className="status">{task.status}</span>
+          <span
+            className={`status ${
+              task.status
+                ? task.status.replace(/\s+/g, "").toLowerCase()
+                : "notstarted"
+            }`}
+          >
+            {task.status || "Not Started"}
+          </span>
         </span>
+
         <span className="created">
-          <strong>Created on:</strong>{" "}
-          {task.date ? task.date : "—"}
+          <strong>Created on:</strong> {task.date ? task.date : "—"}
         </span>
       </div>
     </div>

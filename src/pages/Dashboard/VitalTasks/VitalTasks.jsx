@@ -1,5 +1,4 @@
 
-
 import { useState, useEffect } from "react";
 import TaskCard from "../components/TaskCard/TaskCard";
 import AddTaskModal from "../components/AddTaskModal/AddTaskModal";
@@ -7,9 +6,9 @@ import AddTaskModal from "../components/AddTaskModal/AddTaskModal";
 import deleteIcon from "../../../assets/delete.png";
 import editIcon from "../../../assets/edit.png";
 
-import "./MyTasks.css";
+import "../MyTasks/MyTasks.css"; 
 
-function MyTasks() {
+function VitalTasks() {
   const storedUser = JSON.parse(localStorage.getItem("user") || "{}");
   const [tasks, setTasks] = useState([]);
   const [selectedTask, setSelectedTask] = useState(null);
@@ -22,7 +21,7 @@ function MyTasks() {
     }
   }, []);
 
-  // Save tasks (localStorage + db)
+  // Save tasks (sync localStorage + DB)
   const saveTasks = async (newTasks) => {
     const updatedUser = { ...storedUser, todos: newTasks };
     localStorage.setItem("user", JSON.stringify(updatedUser));
@@ -58,16 +57,19 @@ function MyTasks() {
     setShowModal(false);
   };
 
+  // Filter only extreme tasks
+  const vitalTasks = tasks.filter((t) => t.priority === "Extreme");
+
   return (
     <div className="mytasks-container">
-      {/* Left column (Task list) */}
+      {/* Left column (Vital task list) */}
       <div className="task-list-column">
         <h3 className="mytasks-title">
-          My Tasks <span className="underline"></span>
+          Vital Tasks <span className="underline"></span>
         </h3>
 
         <div className="task-list">
-          {tasks.map((task) => (
+          {vitalTasks.map((task) => (
             <div
               key={task.id}
               onClick={() => setSelectedTask(task)}
@@ -85,7 +87,6 @@ function MyTasks() {
       <div className="task-details-column">
         {selectedTask ? (
           <div className="task-details">
-            {/* Top row: info + image */}
             <div className="task-details-top">
               <div className="task-details-info">
                 <h3>{selectedTask.title}</h3>
@@ -134,7 +135,7 @@ function MyTasks() {
               <p>{selectedTask.description}</p>
             </div>
 
-            {/* Actions bottom-right */}
+            {/* Actions */}
             <div className="task-details-actions">
               <img
                 src={deleteIcon}
@@ -154,11 +155,11 @@ function MyTasks() {
             </div>
           </div>
         ) : (
-          <div className="empty-details">Select a task to see details</div>
+          <div className="empty-details">Select a vital task to see details</div>
         )}
       </div>
 
-      {/* Modal (Edit/Add) */}
+      {/* Modal */}
       {showModal && (
         <AddTaskModal
           onClose={() => {
@@ -174,4 +175,4 @@ function MyTasks() {
   );
 }
 
-export default MyTasks;
+export default VitalTasks;

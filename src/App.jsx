@@ -8,15 +8,11 @@ import Settings from "./pages/Dashboard/Settings/Settings";
 import DashboardHome from "./pages/Dashboard/DashboardHome/DashboardHome";
 
 import MyTasks from "./pages/Dashboard/MyTasks/MyTasks"
+import VitalTasks from "./pages/Dashboard/VitalTasks/VitalTasks";
 
 import ProtectedRoute from "./routes/ProtectedRoute";
 import PublicRoute from "./routes/PublicRoute";
   
-//  Dummy components
-function VitalTask() {
-  return <div style={{ paddingLeft: "380px" }}> Vital Task Page</div>;
-}
-
 function Categories() {
   return <div style={{ paddingLeft: "380px" }}>Categories Page</div>;
 }
@@ -60,7 +56,7 @@ function App() {
           <Route index element={<DashboardHome />} />
 
           {/* nested pages */}
-          <Route path="vital-task" element={<VitalTask />} />
+          <Route path="vital-task" element={<VitalTasks />} />
           <Route path="my-task" element={<MyTasks />} />
           <Route path="categories" element={<Categories />} />
           <Route path="settings" element={<Settings />} />

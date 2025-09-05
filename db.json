@@ -32,7 +32,7 @@
           "id": 1757007332065,
           "title": "Make Pasta",
           "date": "2025-09-16",
-          "priority": "Extreme",
+          "priority": "Moderate",
           "description": "Pasta is make from veggies, cheers with friends and loved ones and having all time fun is good ",
           "status": "Completed"
         },
@@ -50,14 +50,30 @@
           "date": "2025-09-06",
           "priority": "Moderate",
           "description": "Ready early for the party because at everytime i reached late there ",
-          "status": "Not Started"
+          "status": "Completed"
         },
         {
-          "id": 1757054046290,
-          "title": "uuuu",
-          "date": "2025-09-13",
+          "id": 1757056308162,
+          "title": "Go ahead with the friends",
+          "date": "2025-09-08",
+          "priority": "Moderate",
+          "description": "It is good  to visit with friends",
+          "status": "Completed"
+        },
+        {
+          "id": 1757060219179,
+          "title": "Help the needy people",
+          "date": "2025-09-08",
           "priority": "Extreme",
-          "description": "uuuuuu",
+          "description": "Donating clothes, foods, drinks, happiness with others makes a man so happy and cheerful",
+          "status": "In Progress"
+        },
+        {
+          "id": 1757060530205,
+          "title": "Offer the all prayers",
+          "date": "2025-09-06",
+          "priority": "Extreme",
+          "description": "It is Sunnah to do all the tasks and things which makes Allah Almighty happy",
           "status": "Not Started"
         }
       ]
