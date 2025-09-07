@@ -1,10 +1,7 @@
-
-
 .mytasks-container {
   display: flex;
-  height: auto;
   gap: 20px;
- 
+  height: auto;
 }
 
 /* Left column */
@@ -21,16 +18,12 @@
 }
 
 .mytasks-title {
-  
   margin-bottom: 18px;
   position: relative;
-
   font-family: 'Montserrat', sans-serif;
-font-weight: 600;
-font-size: 16px;
-line-height: 100%;
-letter-spacing: 0%;
-
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
 }
 
 .underline {
@@ -48,7 +41,6 @@ letter-spacing: 0%;
   padding-right: 6px;
 }
 
-/* Optional scrollbar style */
 .task-list::-webkit-scrollbar {
   width: 6px;
 }
@@ -60,28 +52,21 @@ letter-spacing: 0%;
   background: transparent;
 }
 
-
 .task-wrapper.active {
- background: #A1A3AB2B;
+  background: #e9ecef;
   border-radius: 8px;
 }
 
 /* Right column */
-
 .task-details-column {
-  /* flex: 1; */
+  width: 450px;
   padding: 20px;
   border: 1px solid #A1A3ABA1;
   border-radius: 12px;
-  width: 450px;
   margin-bottom: 32px;
 }
 
-
 .task-details {
-  
-  border-radius: 12px;
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -106,46 +91,19 @@ letter-spacing: 0%;
   font-size: 16px;
   font-weight: 600;
   color: #000;
-  font-family: 'Inter', sans-serif;
 }
 
 .task-details-info span {
   font-size: 14px;
   font-weight: 500;
-  
-}
-
-
-/* Status colors */
-.task-details-info .status.notstarted {
-  color: #f44336; 
-}
-
-.task-details-info .status.inprogress {
-  color: #42ADE2; 
-}
-
-.task-details-info .status.completed {
-  color: #28a745; 
 }
 
 .task-details-info .date {
   color: #A1A3AB;
   font-size: 12px;
-} 
-
-
-/* .task-details-info .priority {
-  color: #F21E1E; 
 }
 
-.task-details-info .status {
-  color: #F21E1E; 
-}
-
-
-
-/* Image on right side */
+/* Image */
 .task-details-image {
   width: 160px;
   height: 120px;
@@ -164,8 +122,14 @@ letter-spacing: 0%;
   object-fit: cover;
 }
 
-/* Description below */
+.task-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #e0e0e0;
+  border-radius: 8px;
+}
 
+/* Description */
 .task-details-desc {
   font-size: 14px;
   color: #747474;
@@ -174,7 +138,7 @@ letter-spacing: 0%;
   font-weight: 400;
 }
 
-/* Bottom actions */
+/* Actions */
 .task-details-actions {
   display: flex;
   justify-content: flex-end;
@@ -186,23 +150,4 @@ letter-spacing: 0%;
   height: 36px;
   cursor: pointer;
   transition: transform 0.2s ease;
-}
-
-
-.task-list .task-wrapper.active {
-  background-color: #e9ecef !important;
-
-}
-
-
-.priority-low {
-  color: #F21E1E;  
-}
-
-.priority-moderate {
-  color: blue;   
-}
-
-.priority-extreme {
-  color: #F21E1E;    
 }

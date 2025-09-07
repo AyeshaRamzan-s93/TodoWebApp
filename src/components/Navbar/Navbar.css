@@ -150,16 +150,15 @@
 
 
 
-
-
-/* .hamburger {
+ 
+ .hamburger {
   font-size: 28px;
   cursor: pointer;
   display: none; 
-} */
+} 
 
 
-/* .sidebar {
+ .sidebar-nav {
   position: fixed;
   top: 0;
   right: -250px;  
@@ -172,13 +171,13 @@
   padding: 20px;
   transition: right 0.3s ease;
   z-index: 1000;
-} */
+} 
 
-/* .sidebar.open {
+ .sidebar-nav.open {
   right: 0;
-} */
+} 
 
-/* .sidebar a {
+ .sidebar-nav a {
   text-decoration: none;
   color: #000;
   font-size: 16px;
@@ -192,7 +191,6 @@
   cursor: pointer;
 }
 
-
 .overlay {
   position: fixed;
   top: 0;
@@ -201,7 +199,7 @@
   height: 100%;
   background: rgba(0,0,0,0.3);
   z-index: 500;
-} */
+} 
 
 
 @media (max-width: 1024px) {

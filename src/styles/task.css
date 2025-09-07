@@ -1,0 +1,24 @@
+
+/* src/styles/task.css */
+
+/* ---- Status ---- */
+.status.notstarted {
+  color: #ff4d4d;
+}
+.status.inprogress {
+  color: #377dff;
+}
+.status.completed {
+  color: #22c55e;
+}
+
+/* ---- Priority ---- */
+.priority.low {
+  color: #ff4d4d;
+}
+.priority.moderate {
+  color: #377dff;
+}
+.priority.extreme {
+  color: #d00000;
+}

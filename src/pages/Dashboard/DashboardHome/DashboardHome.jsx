@@ -1,12 +1,10 @@
 
-
-
+import { useOutletContext } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AddTaskModal from "../components/AddTaskModal/AddTaskModal";
 import TaskCard from "../components/TaskCard/TaskCard";
 import TaskStatus from "../components/TaskStatus/TaskStatus";
 import TaskDetails from "../TaskDetails/TaskDetails";
-
 
 import "./DashboardHome.css";
 
@@ -22,9 +20,12 @@ import pendingIcon from "../../../assets/Pending.png";
 import completedIcon from "../../../assets/Task Complete.png";
 import plusIcon from "../../../assets/plusIcon.png";
 
-function DashboardHome() {
+function DashboardHome({ setSidebarActive }) {
   const storedUser = JSON.parse(localStorage.getItem("user") || "{}");
   const name = storedUser.firstName || "User";
+
+  // ✅ Context only for inline details
+  const { inlineSelectedTask, setInlineSelectedTask } = useOutletContext();
 
   const [tasks, setTasks] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -38,7 +39,7 @@ function DashboardHome() {
     }
   }, []);
 
-  // Save tasks (localStorage + db)
+  // Save tasks
   const saveTasks = async (newTasks) => {
     const updatedUser = { ...storedUser, todos: newTasks };
     localStorage.setItem("user", JSON.stringify(updatedUser));
@@ -55,7 +56,7 @@ function DashboardHome() {
     }
   };
 
-  // Save (add or edit)
+  // Save task (add/edit)
   const handleSaveTask = (task) => {
     if (isEditing) {
       const updated = tasks.map((t) => (t.id === task.id ? { ...task } : t));
@@ -72,6 +73,7 @@ function DashboardHome() {
     const updated = tasks.filter((t) => t.id !== id);
     saveTasks(updated);
     setSelectedTask(null);
+    setInlineSelectedTask(null);
   };
 
   // Update status
@@ -81,6 +83,9 @@ function DashboardHome() {
     );
     saveTasks(updated);
     setSelectedTask((prev) =>
+      prev && prev.id === id ? { ...prev, status: newStatus } : prev
+    );
+    setInlineSelectedTask((prev) =>
       prev && prev.id === id ? { ...prev, status: newStatus } : prev
     );
   };
@@ -97,100 +102,134 @@ function DashboardHome() {
   const inProgressPct = Math.round((inProgress / total) * 100);
   const notStartedPct = Math.round((notStarted / total) * 100);
 
+  // 👇 Clear sidebar highlight when viewing inline details
+  useEffect(() => {
+    if (setSidebarActive) {
+      setSidebarActive(selectedTask || inlineSelectedTask ? null : "dashboard");
+    }
+  }, [selectedTask, inlineSelectedTask, setSidebarActive]);
+
+  // ----------------- UI -----------------
   return (
-    <div className="dashboard-container">
-      {/* Top bar */}
-      <div className="dashboard-topbar">
-        <div className="welcome-text">
-          <h2>
-            Welcome back, {name}
-            <img src={handwaveIcon} alt="wave" className="wave-icon" />
-          </h2>
-        </div>
-
-        <div className="topbar-right">
-          <div className="avatars">
-            <img src={user1} alt="User 1" />
-            <img src={user2} alt="User 2" />
-            <img src={user3} alt="User 3" />
-            <img src={user4} alt="User 4" />
-            <img src={user5} alt="User 5" />
-          </div>
-          <button className="invite-btn">
-            <img src={inviteIcon} alt="Invite" />
-            Invite
-          </button>
-        </div>
-      </div>
-
-      {/* Main content */}
-      <div className="dashboard-main-content">
-        {/* Left side */}
-        <div className="left-column">
-          <div className="todo-card">
-            <div className="todo-header">
-              <div className="header-left">
-                <img src={pendingIcon} alt="pending" />
-                <span className="todo-head">To-Do</span>
-              </div>
-              <div className="header-right" onClick={() => setShowModal(true)}>
-                <img src={plusIcon} alt="add" />
-                <span className="gray-text">Add task</span>
-              </div>
+    <div
+      className={`dashboard-container ${
+        selectedTask || inlineSelectedTask ? "details-mode" : "dashboard-mode"
+      }`}
+    >
+      {!selectedTask && !inlineSelectedTask ? (
+        <>
+          {/* Topbar */}
+          <div className="dashboard-topbar">
+            <div className="welcome-text">
+              <h2>
+                Welcome back, {name}
+                <img src={handwaveIcon} alt="wave" className="wave-icon" />
+              </h2>
             </div>
-            <div className="task-list">
-              {tasks
-                .filter((task) => !task.status || task.status === "Not Started") // ✅ only show Not Started
-                .map((task) => (
-                  <div
-                    key={task.id}
-                    onClick={() => setSelectedTask(task)}
-                    className={`task-wrapper ${
-                      selectedTask?.id === task.id ? "active" : ""
-                    }`}
-                  >
-                    <TaskCard task={task} />
+
+            <div className="topbar-right">
+              <div className="avatars">
+                <img src={user1} alt="User 1" />
+                <img src={user2} alt="User 2" />
+                <img src={user3} alt="User 3" />
+                <img src={user4} alt="User 4" />
+                <img src={user5} alt="User 5" />
+              </div>
+              <button className="invite-btn">
+                <img src={inviteIcon} alt="Invite" />
+                Invite
+              </button>
+            </div>
+          </div>
+
+          {/* Main dashboard */}
+          <div className="dashboard-main-content">
+            {/* Left column */}
+            <div className="left-column">
+              <div className="todo-card">
+                <div className="todo-header">
+                  <div className="header-left">
+                    <img src={pendingIcon} alt="pending" />
+                    <span className="todo-head">To-Do</span>
                   </div>
-                ))}
+                  <div
+                    className="header-right"
+                    onClick={() => setShowModal(true)}
+                  >
+                    <img src={plusIcon} alt="add" />
+                    <span className="gray-text">Add task</span>
+                  </div>
+                </div>
+                <div className="task-list">
+                  {tasks
+                    .filter(
+                      (task) =>
+                        !task.status ||
+                        task.status === "Not Started" ||
+                        task.status === "In Progress"
+                    )
+                    .map((task) => (
+                      <div
+                        key={task.id}
+                        onClick={() => setSelectedTask(task)}
+                        className="task-wrapper"
+                      >
+                        <TaskCard task={task} />
+                      </div>
+                    ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right column */}
+            <div className="right-column">
+              <TaskStatus
+                completedPct={completedPct}
+                inProgressPct={inProgressPct}
+                notStartedPct={notStartedPct}
+              />
+
+              <div className="completed-card">
+                <div className="completed-header">
+                  <img src={completedIcon} alt="completed" />
+                  <span className="completed-title">Completed Task</span>
+                </div>
+                <div className="task-list">
+                  {tasks
+                    .filter((task) => task.status === "Completed")
+                    .map((task) => (
+                      <div
+                        key={task.id}
+                        onClick={() => setSelectedTask(task)}
+                        className="task-wrapper"
+                      >
+                        <TaskCard task={task} />
+                      </div>
+                    ))}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Right side */}
-        <div className="right-column">
-          <TaskStatus
-            completedPct={completedPct}
-            inProgressPct={inProgressPct}
-            notStartedPct={notStartedPct}
-          />
-
-          <div className="completed-card">
-            <div className="completed-header">
-              <img src={completedIcon} alt="completed" />
-              <span className="completed-title">Completed Task</span>
-            </div>
-            <div className="task-list">
-              {tasks
-                .filter((task) => task.status === "Completed") // ✅ only show Completed
-                .map((task) => (
-                  <TaskCard key={task.id} task={task} />
-                ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Task detail overlay */}
-      {selectedTask && (
+        </>
+      ) : (
+        // ✅ Inline TaskDetails inside dashboard container
         <TaskDetails
-          task={selectedTask}
-          onClose={() => setSelectedTask(null)}
+          task={selectedTask || inlineSelectedTask}
+          onClose={() => {
+            setSelectedTask(null);
+            setInlineSelectedTask(null);
+          }}
           onDelete={handleDelete}
           onUpdateStatus={handleUpdateStatus}
+          onEdit={(task) => {
+            setIsEditing(true);
+            setSelectedTask(task);
+            setShowModal(true);
+          }}
         />
       )}
 
-      {/* Modal */}
+      {/* Add/Edit Modal */}
       {showModal && (
         <AddTaskModal
           onClose={() => {
@@ -207,10 +246,5 @@ function DashboardHome() {
 }
 
 export default DashboardHome;
-
-
-
-
-
 
 

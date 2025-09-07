@@ -63,7 +63,7 @@ const Navbar = () => {
       </div>
 
       {/* Sidebar */}
-      {/* <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+      <div className={`sidebar-nav ${isSidebarOpen ? "open" : ""}`}>
         <span className="close-btn" onClick={() => setIsSidebarOpen(false)}>
           &times;
         </span>
@@ -79,7 +79,7 @@ const Navbar = () => {
         <a href="/signup" onClick={() => setIsSidebarOpen(false)}>
           Sign Up
         </a>
-      </div> */}
+      </div>
 
       {/* Overlay */}
       {isSidebarOpen && (

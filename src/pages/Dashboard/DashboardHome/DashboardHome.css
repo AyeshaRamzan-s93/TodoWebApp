@@ -1,7 +1,4 @@
 
-/* *{
-  border: 2px solid red;
-} */
 
 
 body {
@@ -176,43 +173,12 @@ letter-spacing: 0%;
 
 /* Task Status */
 .status-card {
-  width: 100%;
+  width: 400px;
   /* height: 263px; */
   background: #F5F8FF;
   border-radius: 12px;
   padding: 22px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.09);
-}
-
-.status-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 18px;
-  font-family: 'Inter', sans-serif;
-font-weight: 500;
-font-size: 15px;
-line-height: 100%;
-letter-spacing: 0%;
-
-}
-
-.status-title {
-  color: #FF6767;
-  font-weight: 600;
-}
-
-.status-circles {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.status-circles {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
 }
 
 /* Wrapper */
@@ -222,34 +188,6 @@ letter-spacing: 0%;
   align-items: center;
   width: 100px;
 }
-
-/* SVG Chart */
-/* .circular-chart {
-  width: 100px;
-  height: 100px;
-  transform: rotate(-90deg); 
-}
-
-.circle-bg {
-  fill: none;
-  stroke: #D9D9D9; 
-  stroke-width: 3.8;
-}
-
-.circle-progress {
-  fill: none;
-  stroke: #D9D9D9; 
-  stroke-width: 3.8;
-  stroke-linecap: round;
-  transition: stroke-dasharray 0.6s ease;
-}
-
-.percentage {
-  font-size: 10px;
-  text-anchor: middle;
-  fill: #000000;
-  transform: rotate(90deg); 
-} */
 
 /* Label below */
 
@@ -324,4 +262,25 @@ letter-spacing: 0%;
 }
 .task-list::-webkit-scrollbar-track {
   background: transparent;
+}
+
+
+
+
+
+
+
+/* Dashboard mode = default */
+.dashboard-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Task details = full screen, no borders, no topbar */
+.details-mode {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
 }

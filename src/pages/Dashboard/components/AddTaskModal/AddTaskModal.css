@@ -171,9 +171,9 @@ color: #A1A3AB;
 
 /* Upload box on the left */
 .uploadBox {
-  width: 214px;
+  width: 230px;
   height: 205px;
-  border: 1px dashed #ccc;
+  border: 1px solid #ccc;
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -185,6 +185,10 @@ color: #A1A3AB;
   margin-top: 30px;
 }
 
+.uploadBox p {
+  color: gray;
+  text-align: center;
+}
 .uploadContent .imageIcon {
   font-size: 28px;
 }
