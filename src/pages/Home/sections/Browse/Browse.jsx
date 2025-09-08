@@ -50,9 +50,10 @@ export default function Browse() {
         {/* Swiper Row */}
         <Swiper
           modules={[Navigation]}
+          loop= {true}
           navigation={{ prevEl: ".browse-prev", nextEl: ".browse-next" }}
           breakpoints={{
-            1200: { slidesPerView: 6, spaceBetween: 30 },
+            1200: { slidesPerView: 5, spaceBetween: 30 },
             1024: { slidesPerView: 5, spaceBetween: 25 },
             768: { slidesPerView: 3, spaceBetween: 20 },
             0: { slidesPerView: 2, spaceBetween: 15 },

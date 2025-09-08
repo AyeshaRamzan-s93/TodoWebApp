@@ -1,7 +1,3 @@
-
-
-
-
 // src/pages/Auth/SignUp.jsx
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
@@ -110,7 +106,7 @@ function SignUp() {
         lastName: formData.lastName,
         username: formData.username,
         email: formData.email,
-        password: formData.password, 
+        password: formData.password,
       };
 
       // save in json-server
@@ -219,17 +215,21 @@ function SignUp() {
             )}
 
             <div className="checkbox-group">
+               <label>
               <input
                 type="checkbox"
                 name="agree"
                 checked={formData.agree}
                 onChange={handleChange}
               />
-              <label>I agree to the terms & conditions</label>
+             I agree to the terms & conditions</label>
             </div>
             {errors.agree && <p className="error">{errors.agree}</p>}
 
-            <button type="submit" className="register-btn">
+            <button
+              type="submit"
+              className={`register-btn ${formData.agree ? "active" : ""}`}
+            >
               Register
             </button>
 

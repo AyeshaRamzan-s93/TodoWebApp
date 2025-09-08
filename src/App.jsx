@@ -7,6 +7,8 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Settings from "./pages/Dashboard/Settings/Settings";
 import DashboardHome from "./pages/Dashboard/DashboardHome/DashboardHome";
 
+import NotFound from "./pages/NotFound/NotFound";
+
 import MyTasks from "./pages/Dashboard/MyTasks/MyTasks"
 import VitalTasks from "./pages/Dashboard/VitalTasks/VitalTasks";
 
@@ -62,6 +64,8 @@ function App() {
           <Route path="settings" element={<Settings />} />
           <Route path="help" element={<Help />} />
         </Route>
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

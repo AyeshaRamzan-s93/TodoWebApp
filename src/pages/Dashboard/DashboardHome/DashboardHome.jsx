@@ -32,12 +32,14 @@ function DashboardHome({ setSidebarActive }) {
   const [selectedTask, setSelectedTask] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
 
-  // Load tasks
+  // Load tasks into task state on every component mount
   useEffect(() => {
     if (storedUser.todos) {
       setTasks(storedUser.todos);
     }
   }, []);
+
+    //console.log("Loaded tasks:", tasks);
 
   // Save tasks
   const saveTasks = async (newTasks) => {

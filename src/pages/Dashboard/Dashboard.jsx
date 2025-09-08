@@ -18,12 +18,16 @@ function Dashboard() {
   const [isEditing, setIsEditing] = useState(false);
 
 
+  console.log("Logged-in user:", storedUser);
+
 
   // ----------------- Save & Sync -----------------
   const saveTasks = async (newTasks) => {
     const updatedUser = { ...storedUser, todos: newTasks };
     localStorage.setItem("user", JSON.stringify(updatedUser));
     setTasks(newTasks);
+
+    //console.log("Saving tasks:", newTasks);
 
     try {
       await fetch(`http://localhost:5000/users/${storedUser.id}`, {
@@ -35,6 +39,8 @@ function Dashboard() {
       console.error("DB update failed:", err);
     }
   };
+
+  
 
   // ----------------- CRUD Handlers -----------------
   const handleSaveTask = (task) => {
@@ -71,6 +77,7 @@ function Dashboard() {
     );
   };
 
+
   useEffect(() => {
   if (searchSelectedTask) {
     const updated = tasks.find(t => t.id === searchSelectedTask.id);
@@ -82,7 +89,8 @@ function Dashboard() {
   // ----------------- UI -----------------
   return (
     <div className="dashboard-layout">
-      {/* ✅ Navbar search -> opens modal */}
+      
+      {/* Navbar search -> opens modal */}
       <DashboardNavbar onTaskSelect={setSearchSelectedTask} />
 
       <div className="dashboard-body">
@@ -105,7 +113,7 @@ function Dashboard() {
         </main>
       </div>
 
-      {/* ✅ Global Search Modal */}
+      {/*  Global Search Modal */}
       {searchSelectedTask && (
         <TaskDetailsModal
           task={searchSelectedTask}

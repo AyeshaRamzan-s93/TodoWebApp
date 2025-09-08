@@ -70,6 +70,7 @@ export default function FlashSales() {
         {/* Slider */}
         <Swiper
           modules={[Navigation]}
+          loop= {true}
           navigation={{ prevEl: ".sales-prev", nextEl: ".sales-next" }}
           breakpoints={{
             1200: { slidesPerView: 4.5, spaceBetween: 30 },

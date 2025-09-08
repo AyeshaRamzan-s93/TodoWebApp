@@ -97,19 +97,23 @@ body {
 .checkbox-group {
   display: flex;
   align-items: center;
-  gap: 12px;
   margin-bottom: 18px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer; 
 }
 
 .checkbox-group input {
   width: 16px;
   height: 16px;
-}
-
-.checkbox-group label {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
+  cursor: pointer; 
 }
 
 /* ---------- Error Message ---------- */
@@ -133,6 +137,12 @@ body {
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   transition: 0.3s;
+}
+
+.register-btn.active {
+  background-color: #e05555; 
+  cursor: pointer;
+  opacity: 1;
 }
 
 .register-btn:hover {

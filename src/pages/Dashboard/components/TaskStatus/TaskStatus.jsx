@@ -42,6 +42,7 @@ function CircularProgress({ percentage, color }) {
   );
 }
 
+//Props 
 function TaskStatus({ completedPct, inProgressPct, notStartedPct }) {
   return (
     <div className="status-card">
@@ -80,3 +81,11 @@ function TaskStatus({ completedPct, inProgressPct, notStartedPct }) {
 }
 
 export default TaskStatus;
+
+
+
+
+// Gray circle → full ring
+// Colored arc → represents percentage
+// Center text → percentage number
+// Legend → colored dot + label

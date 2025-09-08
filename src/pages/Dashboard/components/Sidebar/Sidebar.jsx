@@ -2,13 +2,13 @@
 
 
 import { NavLink, useNavigate } from "react-router-dom";
-import dashboardIcon from "../../../../assets/dashboard.png";
-import vitalTaskIcon from "../../../../assets/vital-task.png";
-import myTaskIcon from "../../../../assets/my task.png";
-import categoriesIcon from "../../../../assets/Task Categories.png";
-import settingsIcon from "../../../../assets/Settings.png";
-import helpIcon from "../../../../assets/help.png";
-import logoutIcon from "../../../../assets/logout.png";
+import dashboardIcon from "../../../../assets/dashboard.svg";
+import vitalTaskIcon from "../../../../assets/vital-task.svg";
+import myTaskIcon from "../../../../assets/my task.svg";
+import categoriesIcon from "../../../../assets/Task Categories.svg";
+import settingsIcon from "../../../../assets/Settings.svg";
+import helpIcon from "../../../../assets/Help.svg";
+import logoutIcon from "../../../../assets/logout.svg";
 
 import "./Sidebar.css";
 
