@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import SignUp from "./pages/Auth/SignUp/SignUp";
@@ -9,12 +8,12 @@ import DashboardHome from "./pages/Dashboard/DashboardHome/DashboardHome";
 
 import NotFound from "./pages/NotFound/NotFound";
 
-import MyTasks from "./pages/Dashboard/MyTasks/MyTasks"
+import MyTasks from "./pages/Dashboard/MyTasks/MyTasks";
 import VitalTasks from "./pages/Dashboard/VitalTasks/VitalTasks";
 
 import ProtectedRoute from "./routes/ProtectedRoute";
 import PublicRoute from "./routes/PublicRoute";
-  
+
 function Categories() {
   return <div style={{ paddingLeft: "380px" }}>Categories Page</div>;
 }
@@ -26,6 +25,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* this is the testing comment */}
         {/* Public routes */}
         <Route path="/" element={<Home />} />
         <Route
